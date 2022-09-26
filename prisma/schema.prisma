@@ -13,3 +13,8 @@ datasource db {
 model Example {
     id String @id @default(cuid())
 }
+
+model Counter {
+    id String @id
+    count Int
+}
