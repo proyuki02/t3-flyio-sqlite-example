@@ -6,7 +6,7 @@ export const exampleRouter = createRouter()
     async resolve({ ctx }) {
       const pv = await ctx.prisma.counter.upsert({
         where: { id: 'pv' },
-        create: { id: 'pv', count: 0 },
+        create: { id: 'pv', count: 1 },
         update: { count: {increment: 1}},
       });
       return pv.count;
